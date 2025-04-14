@@ -66,8 +66,7 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.enterText(
-        find.byKey(const ValueKey('TextField_s8in')), 'Nadia');
+    await tester.enterText(find.byKey(const ValueKey('NameVar_s8in')), 'Nadia');
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('Button_hob0')));
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
@@ -86,6 +85,75 @@ void main() async {
       child: const MyApp(),
     ));
     await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupEmail_2ckp')), 'example@gmail.com');
+    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
+    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
+        'ballislife03');
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
+  });
+
+  testWidgets('Wrong Password', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: const MyApp(),
+    ));
+    await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupEmail_2ckp')), 'example@gmail.com');
+    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
+    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
+        'Ballislife03');
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
+  });
+
+  testWidgets('No email entered', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: const MyApp(),
+    ));
+    await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
+    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
+    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
+        'Ballislife03');
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
+  });
+
+  testWidgets('No password entered', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: const MyApp(),
+    ));
+    await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
+    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
+    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
   });
 }
 

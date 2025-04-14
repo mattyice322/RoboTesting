@@ -139,18 +139,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => LessonTemplateWidget(),
         ),
         FFRoute(
-          name: BlocklyPageTestWidget.routeName,
-          path: BlocklyPageTestWidget.routePath,
-          builder: (context, params) => BlocklyPageTestWidget(
-            connectedDevice: params.getParam(
-              'connectedDevice',
-              ParamType.DataStruct,
-              isList: false,
-              structBuilder: BTDevicesStruct.fromSerializableMap,
-            ),
-          ),
-        ),
-        FFRoute(
           name: ConnectBTWidget.routeName,
           path: ConnectBTWidget.routePath,
           builder: (context, params) => ConnectBTWidget(),
@@ -252,6 +240,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: LoginPageCopy2CopyWidget.routeName,
           path: LoginPageCopy2CopyWidget.routePath,
           builder: (context, params) => LoginPageCopy2CopyWidget(),
+        ),
+        FFRoute(
+          name: StreakWidget.routeName,
+          path: StreakWidget.routePath,
+          builder: (context, params) => StreakWidget(),
+        ),
+        FFRoute(
+          name: ProcessinVisitWidget.routeName,
+          path: ProcessinVisitWidget.routePath,
+          builder: (context, params) => ProcessinVisitWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

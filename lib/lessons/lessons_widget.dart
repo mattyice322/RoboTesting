@@ -1,8 +1,6 @@
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/index.dart';
 import 'package:flutter/material.dart';
 import 'lessons_model.dart';
 export 'lessons_model.dart';
@@ -72,21 +70,8 @@ class _LessonsWidgetState extends State<LessonsWidget> {
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: FFButtonWidget(
-                  onPressed: () async {
-                    logFirebaseEvent('LESSONS_PAGE_BUTTON_BTN_ON_TAP');
-                    logFirebaseEvent('Button_navigate_to');
-
-                    context.pushNamed(
-                      BlocklyPageTestWidget.routeName,
-                      queryParameters: {
-                        'connectedDevice': serializeParam(
-                          BTDevicesStruct(
-                            id: '',
-                          ),
-                          ParamType.DataStruct,
-                        ),
-                      }.withoutNulls,
-                    );
+                  onPressed: () {
+                    print('Button pressed ...');
                   },
                   text: 'Button',
                   options: FFButtonOptions(

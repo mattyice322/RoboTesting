@@ -1,8 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/components/net_promoter_score_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -46,6 +48,44 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       logFirebaseEvent('HomePage_update_app_state');
       FFAppState().loginCount = FFAppState().loginCount + 1;
       safeSetState(() {});
+      if (currentUserDocument?.lastLogin != null) {
+        logFirebaseEvent('HomePage_backend_call');
+
+        await currentUserReference!.update(createUsersRecordData(
+          loginStreak: functions.daysSinceLastLogin(
+              currentUserDocument!.lastLogin!, getCurrentTimestamp),
+        ));
+        if (valueOrDefault(currentUserDocument?.loginStreak, 0) != 0) {
+          logFirebaseEvent('HomePage_navigate_to');
+
+          context.pushNamed(
+            ProcessinVisitWidget.routeName,
+            extra: <String, dynamic>{
+              kTransitionInfoKey: TransitionInfo(
+                hasTransition: true,
+                transitionType: PageTransitionType.fade,
+                duration: Duration(milliseconds: 0),
+              ),
+            },
+          );
+        } else {
+          return;
+        }
+      } else {
+        logFirebaseEvent('HomePage_navigate_to');
+
+        context.pushNamed(
+          ProcessinVisitWidget.routeName,
+          extra: <String, dynamic>{
+            kTransitionInfoKey: TransitionInfo(
+              hasTransition: true,
+              transitionType: PageTransitionType.fade,
+              duration: Duration(milliseconds: 0),
+            ),
+          },
+        );
+      }
+
       if ((FFAppState().loginCount == 5) && !FFAppState().npsShown) {
         logFirebaseEvent('HomePage_update_app_state');
         FFAppState().npsShown = true;
@@ -112,12 +152,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 60.0, 0.0, 30.0),
-                    child: AuthUserStreamWidget(
-                      builder: (context) => Text(
-                        'Hello ${currentUserDisplayName}',
+                  Align(
+                    alignment: AlignmentDirectional(0.0, -1.0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          150.0, 60.0, 0.0, 30.0),
+                      child: Text(
+                        'Hello ${FFAppState().Name}',
                         textAlign: TextAlign.center,
                         style:
                             FlutterFlowTheme.of(context).headlineLarge.override(
@@ -181,72 +222,41 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   key: ValueKey('Column_o84v'),
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 210.0, 0.0),
-                      child: Text(
-                        '10 Day Streak',
-                        textAlign: TextAlign.start,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'KoHo',
-                              fontSize: 10.0,
-                              letterSpacing: 0.0,
-                            ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 200.0, 0.0),
-                      child: Text(
-                        'Daily Task',
-                        textAlign: TextAlign.start,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'KoHo',
-                              fontSize: 16.0,
-                              letterSpacing: 0.0,
-                            ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 16.0, 0.0, 0.0),
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: 'Start',
-                            icon: Icon(
-                              Icons.play_arrow,
-                              size: 20.0,
-                            ),
-                            options: FFButtonOptions(
-                              width: 130.0,
-                              height: 30.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 40.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 10.0, 0.0),
-                              color: Color(0xFFF9C746),
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
+                    Align(
+                      alignment: AlignmentDirectional(0.0, -1.0),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        child: Text(
+                          'Your Login Streak',
+                          textAlign: TextAlign.center,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'KoHo',
-                                    fontSize: 15.0,
+                                    fontSize: 20.0,
                                     letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                              elevation: 0.0,
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
                         ),
-                      ],
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                      child: AuthUserStreamWidget(
+                        builder: (context) => Text(
+                          valueOrDefault(currentUserDocument?.loginStreak, 0)
+                              .toString(),
+                          textAlign: TextAlign.start,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'KoHo',
+                                    fontSize: 30.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -255,19 +265,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                   child: FFButtonWidget(
-                    onPressed: () async {
-                      logFirebaseEvent('HOME_CODING_PLAYGROUND_BTN_ON_TAP');
-                      logFirebaseEvent('Button_navigate_to');
-
-                      context.pushNamed(
-                        BlocklyPageTestWidget.routeName,
-                        queryParameters: {
-                          'connectedDevice': serializeParam(
-                            FFAppState().connectedDevice,
-                            ParamType.DataStruct,
-                          ),
-                        }.withoutNulls,
-                      );
+                    onPressed: () {
+                      print('Button pressed ...');
                     },
                     text: 'Coding Playground',
                     options: FFButtonOptions(

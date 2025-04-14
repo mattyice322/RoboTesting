@@ -182,6 +182,9 @@ class _OnBoarding2WidgetState extends State<OnBoarding2Widget> {
                   key: ValueKey('Button_miet'),
                   onPressed: () async {
                     logFirebaseEvent('ON_BOARDING2_PAGE_DONE_BTN_ON_TAP');
+                    logFirebaseEvent('Button_update_app_state');
+                    FFAppState().Age = _model.textController.text;
+                    safeSetState(() {});
                     logFirebaseEvent('Button_validate_form');
                     _model.age = true;
                     if (_model.formKey.currentState == null ||

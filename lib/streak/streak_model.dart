@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
-import 'blockly_page_test_widget.dart' show BlocklyPageTestWidget;
+import 'streak_widget.dart' show StreakWidget;
 import 'package:flutter/material.dart';
 
-class BlocklyPageTestModel extends FlutterFlowModel<BlocklyPageTestWidget> {
+class StreakModel extends FlutterFlowModel<StreakWidget> {
   @override
   void initState(BuildContext context) {}
 

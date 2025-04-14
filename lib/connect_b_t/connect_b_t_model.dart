@@ -30,8 +30,6 @@ class ConnectBTModel extends FlutterFlowModel<ConnectBTWidget> {
   bool? btEnabledUpdate;
   // Stores action output result for [Custom Action - findDevices] action in Button widget.
   List<BTDevicesStruct>? newDevices;
-  // Stores action output result for [Custom Action - connectDevice] action in Container widget.
-  bool? connectState;
 
   @override
   void initState(BuildContext context) {}

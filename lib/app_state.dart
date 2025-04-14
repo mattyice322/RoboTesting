@@ -72,4 +72,16 @@ class FFAppState extends ChangeNotifier {
   void updateConnectedDeviceStruct(Function(BTDevicesStruct) updateFn) {
     updateFn(_connectedDevice);
   }
+
+  String _Name = '';
+  String get Name => _Name;
+  set Name(String value) {
+    _Name = value;
+  }
+
+  String _Age = '';
+  String get Age => _Age;
+  set Age(String value) {
+    _Age = value;
+  }
 }

@@ -9,7 +9,6 @@ import '/flutter_flow/permissions_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'connect_b_t_model.dart';
 export 'connect_b_t_model.dart';
 
@@ -305,135 +304,45 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 12.0),
-                                          child: InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onTap: () async {
-                                              logFirebaseEvent(
-                                                  'CONNECT_B_T_Container_k4v9iyso_ON_TAP');
-                                              logFirebaseEvent(
-                                                  'Container_custom_action');
-                                              _model.connectState =
-                                                  await actions.connectDevice(
-                                                devicesListViewItem,
-                                              );
-                                              if (_model.connectState!) {
-                                                logFirebaseEvent(
-                                                    'Container_navigate_to');
-
-                                                context.pushNamed(
-                                                  BlocklyPageTestWidget
-                                                      .routeName,
-                                                  queryParameters: {
-                                                    'connectedDevice':
-                                                        serializeParam(
-                                                      devicesListViewItem,
-                                                      ParamType.DataStruct,
-                                                    ),
-                                                  }.withoutNulls,
-                                                );
-
-                                                logFirebaseEvent(
-                                                    'Container_update_app_state');
-                                                FFAppState().isDeviceConnected =
-                                                    true;
-                                                FFAppState().connectedDevice =
-                                                    devicesListViewItem;
-                                                safeSetState(() {});
-                                              } else {
-                                                logFirebaseEvent(
-                                                    'Container_show_snack_bar');
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  SnackBar(
-                                                    content: Text(
-                                                      'Failed to connect to device bluetooth',
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                        'KoHo',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                      ),
-                                                    ),
-                                                    duration: Duration(
-                                                        milliseconds: 4000),
-                                                    backgroundColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .primary,
-                                                  ),
-                                                );
-                                              }
-
-                                              safeSetState(() {});
-                                            },
-                                            child: Container(
-                                              width: double.infinity,
-                                              decoration: BoxDecoration(
+                                          child: Container(
+                                            width: double.infinity,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              border: Border.all(
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
-                                                border: Border.all(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondary,
-                                                ),
+                                                        .secondary,
                                               ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        16.0, 12.0, 16.0, 12.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Text(
-                                                              devicesListViewItem
-                                                                  .name,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyLarge
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'KoHo',
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                  ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Text(
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      16.0, 12.0, 16.0, 12.0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Text(
                                                             devicesListViewItem
-                                                                .id,
+                                                                .name,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
-                                                                .labelSmall
+                                                                .bodyLarge
                                                                 .override(
                                                                   fontFamily:
                                                                       'KoHo',
@@ -441,19 +350,40 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
+                                                        ],
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    5.0,
+                                                                    0.0,
+                                                                    0.0),
+                                                        child: Text(
+                                                          devicesListViewItem
+                                                              .id,
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .labelSmall
+                                                              .override(
+                                                                fontFamily:
+                                                                    'KoHo',
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
                                                         ),
-                                                      ],
-                                                    ),
-                                                    Icon(
-                                                      Icons.arrow_forward_ios,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                      size: 24.0,
-                                                    ),
-                                                  ],
-                                                ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Icon(
+                                                    Icons.arrow_forward_ios,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    size: 24.0,
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),

@@ -7,11 +7,11 @@ class OnBoardingModel extends FlutterFlowModel<OnBoardingWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
-  String? _textControllerValidator(BuildContext context, String? val) {
+  // State field(s) for NameVar widget.
+  FocusNode? nameVarFocusNode;
+  TextEditingController? nameVarTextController;
+  String? Function(BuildContext, String?)? nameVarTextControllerValidator;
+  String? _nameVarTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return 'Name is required';
     }
@@ -24,12 +24,12 @@ class OnBoardingModel extends FlutterFlowModel<OnBoardingWidget> {
 
   @override
   void initState(BuildContext context) {
-    textControllerValidator = _textControllerValidator;
+    nameVarTextControllerValidator = _nameVarTextControllerValidator;
   }
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    nameVarFocusNode?.dispose();
+    nameVarTextController?.dispose();
   }
 }

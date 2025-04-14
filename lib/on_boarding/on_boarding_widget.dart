@@ -28,8 +28,8 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
     _model = createModel(context, () => OnBoardingModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'OnBoarding'});
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.nameVarTextController ??= TextEditingController();
+    _model.nameVarFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -91,11 +91,11 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                   child: Container(
                     width: 300.0,
                     child: TextFormField(
-                      key: ValueKey('TextField_s8in'),
-                      controller: _model.textController,
-                      focusNode: _model.textFieldFocusNode,
+                      key: ValueKey('NameVar_s8in'),
+                      controller: _model.nameVarTextController,
+                      focusNode: _model.nameVarFocusNode,
                       onChanged: (_) => EasyDebounce.debounce(
-                        '_model.textController',
+                        '_model.nameVarTextController',
                         Duration(milliseconds: 2000),
                         () => safeSetState(() {}),
                       ),
@@ -146,18 +146,19 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                         filled: true,
                         fillColor:
                             FlutterFlowTheme.of(context).secondaryBackground,
-                        suffixIcon: _model.textController!.text.isNotEmpty
-                            ? InkWell(
-                                onTap: () async {
-                                  _model.textController?.clear();
-                                  safeSetState(() {});
-                                },
-                                child: Icon(
-                                  Icons.clear,
-                                  size: 22,
-                                ),
-                              )
-                            : null,
+                        suffixIcon:
+                            _model.nameVarTextController!.text.isNotEmpty
+                                ? InkWell(
+                                    onTap: () async {
+                                      _model.nameVarTextController?.clear();
+                                      safeSetState(() {});
+                                    },
+                                    child: Icon(
+                                      Icons.clear,
+                                      size: 22,
+                                    ),
+                                  )
+                                : null,
                       ),
                       style:
                           FlutterFlowTheme.of(context).displayMedium.override(
@@ -165,9 +166,10 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                                 letterSpacing: 0.0,
                               ),
                       textAlign: TextAlign.start,
+                      keyboardType: TextInputType.name,
                       cursorColor: FlutterFlowTheme.of(context).primaryText,
-                      validator:
-                          _model.textControllerValidator.asValidator(context),
+                      validator: _model.nameVarTextControllerValidator
+                          .asValidator(context),
                     ),
                   ),
                 ),
@@ -178,6 +180,9 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                   key: ValueKey('Button_hob0'),
                   onPressed: () async {
                     logFirebaseEvent('ON_BOARDING_PAGE_NEXT_BTN_ON_TAP');
+                    logFirebaseEvent('Button_update_app_state');
+                    FFAppState().Name = _model.nameVarTextController.text;
+                    safeSetState(() {});
                     logFirebaseEvent('Button_validate_form');
                     _model.name = true;
                     if (_model.formKey.currentState == null ||

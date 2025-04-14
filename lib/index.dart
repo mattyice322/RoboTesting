@@ -6,8 +6,6 @@ export '/on_boarding/on_boarding_widget.dart' show OnBoardingWidget;
 export '/on_boarding2/on_boarding2_widget.dart' show OnBoarding2Widget;
 export '/lessons/lessons_widget.dart' show LessonsWidget;
 export '/lesson_template/lesson_template_widget.dart' show LessonTemplateWidget;
-export '/blockly_page_test/blockly_page_test_widget.dart'
-    show BlocklyPageTestWidget;
 export '/connect_b_t/connect_b_t_widget.dart' show ConnectBTWidget;
 export '/b_t_device/b_t_device_widget.dart' show BTDeviceWidget;
 export '/alternative_designs/login_page_copy/login_page_copy_widget.dart'
@@ -33,3 +31,5 @@ export '/alternative_designs/login_page_copy2/login_page_copy2_widget.dart'
     show LoginPageCopy2Widget;
 export '/alternative_designs/login_page_copy2_copy/login_page_copy2_copy_widget.dart'
     show LoginPageCopy2CopyWidget;
+export '/streak/streak_widget.dart' show StreakWidget;
+export '/processin_visit/processin_visit_widget.dart' show ProcessinVisitWidget;
