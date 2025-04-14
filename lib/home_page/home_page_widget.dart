@@ -296,7 +296,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                 child: FFButtonWidget(
-                  key: ValueKey('Button_ijqa'),
                   onPressed: () async {
                     logFirebaseEvent('HOME_PAGE_PAGE_CONNECT_ROBOT_BTN_ON_TAP');
                     logFirebaseEvent('Button_navigate_to');

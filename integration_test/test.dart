@@ -52,7 +52,7 @@ void main() async {
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('LoginButton_i83y')));
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
-    expect(find.byKey(const ValueKey('Button_ijqa')), findsWidgets);
+    expect(find.text('Hello'), findsWidgets);
   });
 
   testWidgets('Onboarding', (WidgetTester tester) async {
