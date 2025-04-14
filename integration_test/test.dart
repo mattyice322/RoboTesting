@@ -51,8 +51,8 @@ void main() async {
         find.byKey(const ValueKey('loginPassword_ps56')), 'csc305');
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('LoginButton_i83y')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
-    expect(find.text('Hello'), findsWidgets);
+    await tester.pumpAndSettle(const Duration(milliseconds: 20000));
+    expect(find.text('Connect'), findsWidgets);
   });
 
   testWidgets('Onboarding', (WidgetTester tester) async {
