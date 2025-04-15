@@ -95,6 +95,28 @@ void main() async {
         find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
         'ballislife03');
     await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupEmail_2ckp')), 'example@gmail.com');
+    await tester.enterText(
+        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
+    await tester.enterText(
+        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
+        'Ballislife03');
+    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
+    await tester.enterText(
+        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
+        'ballislife03');
+    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    await tester.enterText(
+        find.byKey(const ValueKey('signupEmail_2ckp')), 'None');
+    await tester.enterText(
+        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
+    await tester.enterText(
+        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
+        'ballislife03');
   });
 
   testWidgets('Wrong Password', (WidgetTester tester) async {
