@@ -129,9 +129,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
         FFRoute(
           name: LessonsWidget.routeName,
           path: LessonsWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Lessons')
-              : LessonsWidget(),
+          builder: (context, params) => LessonsWidget(),
         ),
         FFRoute(
           name: LessonTemplateWidget.routeName,
@@ -250,6 +248,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: ProcessinVisitWidget.routeName,
           path: ProcessinVisitWidget.routePath,
           builder: (context, params) => ProcessinVisitWidget(),
+        ),
+        FFRoute(
+          name: ControllerWidget.routeName,
+          path: ControllerWidget.routePath,
+          builder: (context, params) => ControllerWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

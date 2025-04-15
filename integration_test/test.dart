@@ -122,7 +122,7 @@ void main() async {
     await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
   });
 
-  testWidgets('OpenExternalURL', (WidgetTester tester) async {
+  testWidgets('Test Dance Button', (WidgetTester tester) async {
     _overrideOnError();
 
     await tester.pumpWidget(ChangeNotifierProvider(
@@ -131,9 +131,14 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.tap(find.text('Visit Website'));
-    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    expect(find.text('elegoo'), findsOneWidget);
+    await tester.pumpAndSettle(
+      const Duration(milliseconds: 3000),
+      EnginePhase.sendSemanticsUpdate,
+      const Duration(milliseconds: 3000),
+    );
+    await tester.tap(find.text('Dance'));
+    await tester.pumpAndSettle(const Duration(milliseconds: 2000));
+    expect(find.text('Command from Blockly: d'), findsOneWidget);
   });
 }
 

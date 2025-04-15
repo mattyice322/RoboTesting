@@ -17,6 +17,9 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
+  final environmentValues = FFDevEnvironmentValues();
+  await environmentValues.initialize();
+
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
@@ -157,7 +160,6 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomePage': HomePageWidget(),
-      'Lessons': LessonsWidget(),
       'AccountInfo': AccountInfoWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -183,14 +185,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.library_books,
-              size: 24.0,
-            ),
-            label: 'Lessons',
             tooltip: '',
           ),
           BottomNavigationBarItem(

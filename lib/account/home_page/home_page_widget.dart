@@ -1,9 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/net_promoter_score_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/nps/net_promoter_score/net_promoter_score_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +59,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           logFirebaseEvent('HomePage_navigate_to');
 
           context.pushNamed(
-            ProcessinVisitWidget.routeName,
+            HomePageWidget.routeName,
             extra: <String, dynamic>{
               kTransitionInfoKey: TransitionInfo(
                 hasTransition: true,
@@ -75,7 +75,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         logFirebaseEvent('HomePage_navigate_to');
 
         context.pushNamed(
-          ProcessinVisitWidget.routeName,
+          HomePageWidget.routeName,
           extra: <String, dynamic>{
             kTransitionInfoKey: TransitionInfo(
               hasTransition: true,

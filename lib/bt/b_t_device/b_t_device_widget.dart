@@ -245,6 +245,21 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                           await actions.sendDance(
                             widget.connectedDevice!,
                           );
+                          logFirebaseEvent('Button_show_snack_bar');
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Dance command sent!',
+                                style: TextStyle(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                ),
+                              ),
+                              duration: Duration(milliseconds: 4000),
+                              backgroundColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                            ),
+                          );
                         },
                         text: 'Dance',
                         options: FFButtonOptions(

@@ -1,13 +1,16 @@
 // Export pages
-export '/login_page/login_page_widget.dart' show LoginPageWidget;
-export '/home_page/home_page_widget.dart' show HomePageWidget;
-export '/sign_up_page/sign_up_page_widget.dart' show SignUpPageWidget;
-export '/on_boarding/on_boarding_widget.dart' show OnBoardingWidget;
-export '/on_boarding2/on_boarding2_widget.dart' show OnBoarding2Widget;
-export '/lessons/lessons_widget.dart' show LessonsWidget;
-export '/lesson_template/lesson_template_widget.dart' show LessonTemplateWidget;
-export '/connect_b_t/connect_b_t_widget.dart' show ConnectBTWidget;
-export '/b_t_device/b_t_device_widget.dart' show BTDeviceWidget;
+export '/onboarding/login_page/login_page_widget.dart' show LoginPageWidget;
+export '/account/home_page/home_page_widget.dart' show HomePageWidget;
+export '/onboarding/sign_up_page/sign_up_page_widget.dart'
+    show SignUpPageWidget;
+export '/onboarding/on_boarding/on_boarding_widget.dart' show OnBoardingWidget;
+export '/onboarding/on_boarding2/on_boarding2_widget.dart'
+    show OnBoarding2Widget;
+export '/lesson2/lessons/lessons_widget.dart' show LessonsWidget;
+export '/lesson1/lesson_template/lesson_template_widget.dart'
+    show LessonTemplateWidget;
+export '/bt/connect_b_t/connect_b_t_widget.dart' show ConnectBTWidget;
+export '/bt/b_t_device/b_t_device_widget.dart' show BTDeviceWidget;
 export '/alternative_designs/login_page_copy/login_page_copy_widget.dart'
     show LoginPageCopyWidget;
 export '/lesson1/lesson1_page1/lesson1_page1_widget.dart'
@@ -31,5 +34,7 @@ export '/alternative_designs/login_page_copy2/login_page_copy2_widget.dart'
     show LoginPageCopy2Widget;
 export '/alternative_designs/login_page_copy2_copy/login_page_copy2_copy_widget.dart'
     show LoginPageCopy2CopyWidget;
-export '/streak/streak_widget.dart' show StreakWidget;
-export '/processin_visit/processin_visit_widget.dart' show ProcessinVisitWidget;
+export '/streak/streak/streak_widget.dart' show StreakWidget;
+export '/streak/processin_visit/processin_visit_widget.dart'
+    show ProcessinVisitWidget;
+export '/controller/controller_widget.dart' show ControllerWidget;
