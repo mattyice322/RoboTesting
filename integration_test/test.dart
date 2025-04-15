@@ -103,12 +103,14 @@ void main() async {
     await tester.enterText(
         find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
         'Ballislife03');
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
     await tester.pumpAndSettle(const Duration(milliseconds: 100));
     await tester.enterText(
         find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
     await tester.enterText(
         find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
         'ballislife03');
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
     await tester.pumpAndSettle(const Duration(milliseconds: 100));
     await tester.enterText(
         find.byKey(const ValueKey('signupEmail_2ckp')), 'None');
@@ -117,9 +119,10 @@ void main() async {
     await tester.enterText(
         find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
         'ballislife03');
+    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
   });
 
-  testWidgets('Wrong Password', (WidgetTester tester) async {
+  testWidgets('OpenExternalURL', (WidgetTester tester) async {
     _overrideOnError();
 
     await tester.pumpWidget(ChangeNotifierProvider(
@@ -128,52 +131,9 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
-    await tester.enterText(
-        find.byKey(const ValueKey('signupEmail_2ckp')), 'example@gmail.com');
-    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
-    await tester.enterText(
-        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
-    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
-    await tester.enterText(
-        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
-        'Ballislife03');
-    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
-  });
-
-  testWidgets('No email entered', (WidgetTester tester) async {
-    _overrideOnError();
-
-    await tester.pumpWidget(ChangeNotifierProvider(
-      create: (context) => FFAppState(),
-      child: const MyApp(),
-    ));
-    await GoogleFonts.pendingFonts();
-
-    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
-    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
-    await tester.enterText(
-        find.byKey(const ValueKey('signupPassword_1wnh')), 'ballislife03');
-    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
-    await tester.enterText(
-        find.byKey(const ValueKey('signupConfirmPassword_kdm9')),
-        'Ballislife03');
-    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
-  });
-
-  testWidgets('No password entered', (WidgetTester tester) async {
-    _overrideOnError();
-
-    await tester.pumpWidget(ChangeNotifierProvider(
-      create: (context) => FFAppState(),
-      child: const MyApp(),
-    ));
-    await GoogleFonts.pendingFonts();
-
-    await tester.tap(find.byKey(const ValueKey('signupEmail_2ckp')));
-    await tester.tap(find.byKey(const ValueKey('signupPassword_1wnh')));
-    await tester.tap(find.byKey(const ValueKey('signupConfirmPassword_kdm9')));
-    await tester.tap(find.byKey(const ValueKey('Button_kuv7')));
+    await tester.tap(find.text('Visit Website'));
+    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
+    expect(find.text('elegoo'), findsOneWidget);
   });
 }
 
