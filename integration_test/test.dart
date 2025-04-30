@@ -43,14 +43,14 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 50000));
     await tester.enterText(
         find.byKey(const ValueKey('loginEmail_gkw6')), 'jess@gmail.com');
     await tester.enterText(
         find.byKey(const ValueKey('loginPassword_ps56')), 'csc305');
     await tester.tap(find.byKey(const ValueKey('LoginButton_i83y')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
-    expect(find.text('Connect'), findsWidgets);
+    await tester.pumpAndSettle(const Duration(milliseconds: 50000));
+    expect(find.byKey(const ValueKey('Column_o84v')), findsWidgets);
   });
 
   testWidgets('Onboarding', (WidgetTester tester) async {
