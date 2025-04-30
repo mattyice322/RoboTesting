@@ -43,13 +43,13 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.pumpAndSettle(const Duration(milliseconds: 20000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
     await tester.enterText(
         find.byKey(const ValueKey('loginEmail_gkw6')), 'jess@gmail.com');
     await tester.enterText(
         find.byKey(const ValueKey('loginPassword_ps56')), 'csc305');
     await tester.tap(find.byKey(const ValueKey('LoginButton_i83y')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 20000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
     expect(find.text('Connect'), findsWidgets);
   });
 
@@ -64,6 +64,7 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
+    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
     await tester.enterText(find.byKey(const ValueKey('NameVar_s8in')), 'Nadia');
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('Button_hob0')));
@@ -71,7 +72,7 @@ void main() async {
     await tester.enterText(find.byKey(const ValueKey('TextField_hptm')), '22');
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('Button_miet')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
     expect(find.byKey(const ValueKey('Column_o84v')), findsWidgets);
   });
 

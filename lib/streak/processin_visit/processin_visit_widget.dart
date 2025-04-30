@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'processin_visit_model.dart';
 export 'processin_visit_model.dart';
 
@@ -69,10 +70,19 @@ class _ProcessinVisitWidgetState extends State<ProcessinVisitWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
           actions: [],

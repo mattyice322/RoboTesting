@@ -7,6 +7,7 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'streak_model.dart';
 export 'streak_model.dart';
 
@@ -115,10 +116,19 @@ class _StreakWidgetState extends State<StreakWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
           actions: [],

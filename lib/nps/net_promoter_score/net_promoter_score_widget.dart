@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'net_promoter_score_model.dart';
 export 'net_promoter_score_model.dart';
@@ -76,8 +77,21 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                   'How likely are you to recommend RoboBlocks to a friend or colleague?',
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
-                        fontFamily: 'Inter Tight',
+                        font: GoogleFonts.interTight(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .fontStyle,
+                        ),
                         letterSpacing: 0.0,
+                        fontWeight: FlutterFlowTheme.of(context)
+                            .headlineSmall
+                            .fontWeight,
+                        fontStyle: FlutterFlowTheme.of(context)
+                            .headlineSmall
+                            .fontStyle,
                       ),
                 ),
               ),
@@ -87,9 +101,19 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                   'On a scale from 0 to 10, where 0 is not at all likely and 10 is extremely likely',
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        font: GoogleFonts.inter(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
                         color: FlutterFlowTheme.of(context).secondaryText,
                         letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                 ),
               ),
@@ -125,17 +149,43 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                     Text(
                       'Not likely',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .fontStyle,
+                            ),
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontStyle,
                           ),
                     ),
                     Text(
                       'Extremely likely',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .fontStyle,
+                            ),
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontStyle,
                           ),
                     ),
                   ],
@@ -149,9 +199,17 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                     Text(
                       'What could we do to improve your experience?',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
                           ),
                     ),
                     TextFormField(
@@ -163,8 +221,21 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                         hintText: 'Share your feedback here...',
                         hintStyle:
                             FlutterFlowTheme.of(context).bodyMedium.override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -199,8 +270,21 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                             FlutterFlowTheme.of(context).primaryBackground,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
                           ),
                       maxLines: 5,
                       minLines: 3,
@@ -258,9 +342,21 @@ class _NetPromoterScoreWidgetState extends State<NetPromoterScoreWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Inter Tight',
+                          font: GoogleFonts.interTight(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontStyle,
+                          ),
                           color: FlutterFlowTheme.of(context).info,
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .titleSmall
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
                         ),
                     elevation: 0.0,
                     borderSide: BorderSide(

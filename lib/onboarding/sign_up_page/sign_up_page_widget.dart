@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'sign_up_page_model.dart';
 export 'sign_up_page_model.dart';
 
@@ -93,10 +94,23 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                         color: FlutterFlowTheme.of(context).alternate,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   fontSize: 40.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderSide: BorderSide(
@@ -120,10 +134,19 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
               Text(
                 'SIGN UP',
                 style: FlutterFlowTheme.of(context).displayLarge.override(
-                  fontFamily: 'KoHo',
+                  font: GoogleFonts.koHo(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).displayLarge.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).displayLarge.fontStyle,
+                  ),
                   color: FlutterFlowTheme.of(context).tertiary,
                   fontSize: 60.0,
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).displayLarge.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).displayLarge.fontStyle,
                   shadows: [
                     Shadow(
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -147,15 +170,41 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                       isDense: true,
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Inter',
+                                font: GoogleFonts.inter(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       hintText: 'Email:',
                       hintStyle:
                           FlutterFlowTheme.of(context).displayMedium.override(
-                                fontFamily: 'KoHo',
+                                font: GoogleFonts.koHo(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontStyle,
+                                ),
                                 fontSize: 16.0,
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
                               ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -190,9 +239,21 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                           FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
                           fontSize: 14.0,
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                     cursorColor: FlutterFlowTheme.of(context).primaryText,
                     validator: _model.signupEmailTextControllerValidator
@@ -214,15 +275,41 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                       isDense: true,
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Inter',
+                                font: GoogleFonts.inter(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       hintText: 'Password:',
                       hintStyle:
                           FlutterFlowTheme.of(context).displayMedium.override(
-                                fontFamily: 'KoHo',
+                                font: GoogleFonts.koHo(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontStyle,
+                                ),
                                 fontSize: 16.0,
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
                               ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -270,8 +357,20 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                     cursorColor: FlutterFlowTheme.of(context).primaryText,
                     validator: _model.signupPasswordTextControllerValidator
@@ -293,15 +392,41 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                       isDense: true,
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Inter',
+                                font: GoogleFonts.inter(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       hintText: 'Confirm password:',
                       hintStyle:
                           FlutterFlowTheme.of(context).displayMedium.override(
-                                fontFamily: 'KoHo',
+                                font: GoogleFonts.koHo(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontStyle,
+                                ),
                                 fontSize: 16.0,
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
                               ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -349,8 +474,20 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                     cursorColor: FlutterFlowTheme.of(context).primaryText,
                     validator: _model
@@ -422,9 +559,22 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle:
                         FlutterFlowTheme.of(context).displayLarge.override(
-                              fontFamily: 'KoHo',
+                              font: GoogleFonts.koHo(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayLarge
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayLarge
+                                    .fontStyle,
+                              ),
                               fontSize: 25.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .displayLarge
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .displayLarge
+                                  .fontStyle,
                             ),
                     elevation: 0.0,
                     borderSide: BorderSide(
@@ -439,9 +589,19 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                 child: Text(
                   'or',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        font: GoogleFonts.inter(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
                         fontSize: 20.0,
                         letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                 ),
               ),
@@ -504,9 +664,24 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .headlineLarge
                                       .override(
-                                        fontFamily: 'KoHo',
+                                        font: GoogleFonts.koHo(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineLarge
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineLarge
+                                                  .fontStyle,
+                                        ),
                                         fontSize: 25.0,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .headlineLarge
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .headlineLarge
+                                            .fontStyle,
                                       ),
                                 )),
                               ),

@@ -9,6 +9,7 @@ import '/flutter_flow/permissions_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'connect_b_t_model.dart';
 export 'connect_b_t_model.dart';
 
@@ -142,10 +143,23 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                         color: FlutterFlowTheme.of(context).alternate,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   fontSize: 40.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderSide: BorderSide(
@@ -169,8 +183,21 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
-                                fontFamily: 'KoHo',
+                                font: GoogleFonts.koHo(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .headlineSmall
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .headlineSmall
+                                    .fontStyle,
                               ),
                         ),
                         FFButtonWidget(
@@ -201,9 +228,22 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'KoHo',
+                                  font: GoogleFonts.koHo(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                             elevation: 0.0,
                             borderSide: BorderSide(
@@ -235,8 +275,25 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .headlineSmall
                                         .override(
-                                          fontFamily: 'KoHo',
+                                          font: GoogleFonts.koHo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineSmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineSmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineSmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineSmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                   FFButtonWidget(
@@ -268,9 +325,26 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'KoHo',
+                                            font: GoogleFonts.koHo(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .fontStyle,
+                                            ),
                                             color: Colors.white,
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .fontStyle,
                                           ),
                                       elevation: 0.0,
                                       borderSide: BorderSide(
@@ -344,10 +418,28 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                                                                     .of(context)
                                                                 .bodyLarge
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'KoHo',
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .koHo(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontStyle,
+                                                                  ),
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                         ],
@@ -367,10 +459,28 @@ class _ConnectBTWidgetState extends State<ConnectBTWidget> {
                                                                   .of(context)
                                                               .labelSmall
                                                               .override(
-                                                                fontFamily:
-                                                                    'KoHo',
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .koHo(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmall
+                                                                      .fontStyle,
+                                                                ),
                                                                 letterSpacing:
                                                                     0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmall
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmall
+                                                                    .fontStyle,
                                                               ),
                                                         ),
                                                       ),

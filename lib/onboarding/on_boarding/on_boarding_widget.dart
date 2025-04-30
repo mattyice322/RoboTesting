@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'on_boarding_model.dart';
 export 'on_boarding_model.dart';
 
@@ -77,9 +78,22 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                   getRemoteConfigString('greeting'),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).headlineLarge.override(
-                        fontFamily: 'KoHo',
+                        font: GoogleFonts.koHo(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineLarge
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineLarge
+                              .fontStyle,
+                        ),
                         fontSize: 30.0,
                         letterSpacing: 0.0,
+                        fontWeight: FlutterFlowTheme.of(context)
+                            .headlineLarge
+                            .fontWeight,
+                        fontStyle: FlutterFlowTheme.of(context)
+                            .headlineLarge
+                            .fontStyle,
                       ),
                 ),
               ),
@@ -105,15 +119,41 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                         isDense: true,
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                         hintText: 'Name:',
                         hintStyle:
                             FlutterFlowTheme.of(context).displayMedium.override(
-                                  fontFamily: 'KoHo',
+                                  font: GoogleFonts.koHo(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .displayMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .displayMedium
+                                        .fontStyle,
+                                  ),
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontStyle,
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -162,8 +202,21 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                       ),
                       style:
                           FlutterFlowTheme.of(context).displayMedium.override(
-                                fontFamily: 'KoHo',
+                                font: GoogleFonts.koHo(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
                               ),
                       textAlign: TextAlign.start,
                       keyboardType: TextInputType.name,
@@ -207,9 +260,22 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle:
                         FlutterFlowTheme.of(context).displayMedium.override(
-                              fontFamily: 'KoHo',
+                              font: GoogleFonts.koHo(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
+                              ),
                               fontSize: 25.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .displayMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .displayMedium
+                                  .fontStyle,
                             ),
                     elevation: 0.0,
                     borderSide: BorderSide(

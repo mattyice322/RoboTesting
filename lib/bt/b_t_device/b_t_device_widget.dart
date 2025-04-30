@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'b_t_device_model.dart';
 export 'b_t_device_model.dart';
 
@@ -87,10 +88,23 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                         color: FlutterFlowTheme.of(context).alternate,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   fontSize: 40.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderSide: BorderSide(
@@ -115,8 +129,21 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                         ),
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'KoHo',
+                                  font: GoogleFonts.koHo(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontStyle,
                                 ),
                       ),
                     ),
@@ -144,9 +171,22 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(8.0),
@@ -170,9 +210,22 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(8.0),
@@ -196,9 +249,22 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(8.0),
@@ -222,9 +288,22 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(8.0),
@@ -271,9 +350,22 @@ class _BTDeviceWidgetState extends State<BTDeviceWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
+                                    ),
                                     color: Colors.white,
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
                                   ),
                           elevation: 0.0,
                           borderRadius: BorderRadius.circular(8.0),

@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'on_boarding2_model.dart';
 export 'on_boarding2_model.dart';
 
@@ -86,10 +87,23 @@ class _OnBoarding2WidgetState extends State<OnBoarding2Widget> {
                         color: FlutterFlowTheme.of(context).alternate,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   fontSize: 40.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderSide: BorderSide(
@@ -123,9 +137,22 @@ class _OnBoarding2WidgetState extends State<OnBoarding2Widget> {
                     'Hi ${currentUserDisplayName} Welcome to RoboBlocks! How old are you?',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).headlineLarge.override(
-                          fontFamily: 'KoHo',
+                          font: GoogleFonts.koHo(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .headlineLarge
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .headlineLarge
+                                .fontStyle,
+                          ),
                           fontSize: 30.0,
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineLarge
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineLarge
+                              .fontStyle,
                         ),
                   ),
                 ),
@@ -152,15 +179,41 @@ class _OnBoarding2WidgetState extends State<OnBoarding2Widget> {
                         isDense: true,
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                         hintText: 'Age:',
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -208,8 +261,21 @@ class _OnBoarding2WidgetState extends State<OnBoarding2Widget> {
                       ),
                       style:
                           FlutterFlowTheme.of(context).displayMedium.override(
-                                fontFamily: 'KoHo',
+                                font: GoogleFonts.koHo(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
                               ),
                       textAlign: TextAlign.start,
                       keyboardType: TextInputType.number,
@@ -253,9 +319,22 @@ class _OnBoarding2WidgetState extends State<OnBoarding2Widget> {
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle:
                         FlutterFlowTheme.of(context).displayMedium.override(
-                              fontFamily: 'KoHo',
+                              font: GoogleFonts.koHo(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .displayMedium
+                                    .fontStyle,
+                              ),
                               fontSize: 25.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .displayMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .displayMedium
+                                  .fontStyle,
                             ),
                     elevation: 0.0,
                     borderSide: BorderSide(
