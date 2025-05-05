@@ -64,15 +64,15 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.enterText(find.byKey(const ValueKey('NameVar_s8in')), 'Nadia');
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('Button_hob0')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.enterText(find.byKey(const ValueKey('TextField_hptm')), '22');
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('Button_miet')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 100000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     expect(find.byKey(const ValueKey('Column_o84v')), findsWidgets);
   });
 
